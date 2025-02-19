@@ -1,7 +1,7 @@
-#extracting
-tar xf Voidsuckless.tar.gz -C ~/
 #Important package
-sudo xbps-install base-devel freetype-devel libXft-devel libXinerama-devel libX11-devel libxcb-devel harfbuzz-devel xorg-server xbacklight xbindkeys xvkbd xinput gcc flameshot make binutils compton git NetworkManager network-manager-applet thunar-archive-plugin thunar-volman file-roller lxappearance dialog mtools avahi acpi acpid gvfs xfce4-power-manager pulseaudio pavucontrol pulsemixer feh papirus-icon-theme exa maim dunst xdotool unzip micro geany geany-plugins redshift firefox-esr vlc font-awesome terminus-font libnotify lightdm 
+sudo xbps-install base-devel freetype-devel libXft-devel libXinerama-devel libX11-devel libxcb-devel harfbuzz-devel xorg-server xbacklight xbindkeys xvkbd xorg elogind dbus xinput gcc flameshot make binutils compton git NetworkManager network-manager-applet thunar-archive-plugin thunar-volman file-roller lxappearance dialog mtools avahi acpi acpid gvfs xfce4-power-manager pulseaudio pavucontrol pulsemixer feh papirus-icon-theme exa maim dunst xdotool unzip micro geany geany-plugins redshift firefox-esr vlc font-awesome terminus-font libnotify lightdm 
+#extracting
+tar -xvfz Voidsuckless.tar.gz
 #Void suckless location
 cd Voidsuckless
 #dwm installation 
@@ -17,7 +17,18 @@ cd ..
 cd slstatus 
 sudo make clean install
 #adding Dwm to Lighdm
-cd 
-sudo cp ~/dwm.desktop /usr/share/xsessions/dwm.desktop 
-sudo cp .autostart.sh /usr/local/bin/start_dwm.sh
-
+cd ..  
+cd ..
+sudo chmod +x dwm.desktop
+sudo chmod +x autostart.sh
+sudo cp  dwm.desktop  /usr/share/xsessions/dwm.desktop 
+sudo cp  autostart.sh /usr/local/bin/start_dwm.sh
+#activating services 
+sudo ln -s /etc/sv/dbus /var/service
+sudo ln -s /etc/sv/elogind /var/service
+sudo ln -s /etc/sv/NetworkManager /var/service
+sudo ln -s /etc/sv/lightdm /var/service 
+sudo sv up dbus
+sudo sv up elogind 
+sudo sv up lightdm 
+sudo sv up NetworkManager
