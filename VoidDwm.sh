@@ -1,7 +1,7 @@
 #Important package
 sudo xbps-install base-devel freetype-devel libXft-devel libXinerama-devel libX11-devel libxcb-devel harfbuzz-devel xorg-server xbacklight xbindkeys xvkbd xorg elogind dbus xinput gcc flameshot make binutils compton git NetworkManager network-manager-applet thunar-archive-plugin thunar-volman file-roller lxappearance dialog mtools avahi acpi acpid gvfs xfce4-power-manager pulseaudio pavucontrol pulsemixer feh papirus-icon-theme exa maim dunst xdotool unzip micro geany geany-plugins redshift firefox-esr vlc font-awesome terminus-font libnotify lightdm 
 #extracting
-tar -xvfz Voidsuckless.tar.gz
+tar -xvfz Voidsuckless.tar.gz -C Voidsuckless
 #Void suckless location
 cd Voidsuckless
 #dwm installation 
@@ -21,6 +21,8 @@ cd ..
 cd ..
 sudo chmod +x dwm.desktop
 sudo chmod +x autostart.sh
+sudo mkdir /usr/share/xsessions/
+sudo mkdir /usr/local/bin/
 sudo cp  dwm.desktop  /usr/share/xsessions/dwm.desktop 
 sudo cp  autostart.sh /usr/local/bin/start_dwm.sh
 #activating services 
@@ -35,5 +37,5 @@ sudo sv up NetworkManager
 #flatpak
 sudo xbps-install -S flatpak
 flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
-#reboot 
-sudo reboot
+#reboot
+sudo reboot 
