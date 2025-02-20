@@ -34,8 +34,11 @@ sudo sv up dbus
 sudo sv up elogind 
 sudo sv up lightdm 
 sudo sv up NetworkManager
+#wallpaper
+cp wallpaper.jpg ~/wallpaper.jpg 
 #flatpak
 sudo xbps-install -S flatpak
 flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
 #reboot
-sudo reboot 
+sudo reboot
+ 
