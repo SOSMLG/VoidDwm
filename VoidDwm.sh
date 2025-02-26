@@ -1,7 +1,7 @@
 #Important package
 sudo xbps-install base-devel freetype-devel libXft-devel libXinerama-devel libX11-devel libxcb-devel harfbuzz-devel xorg-server xbacklight xbindkeys xvkbd xorg elogind dbus xinput gcc flameshot make binutils compton git NetworkManager network-manager-applet thunar-archive-plugin thunar-volman file-roller lxappearance dialog mtools avahi acpi acpid gvfs xfce4-power-manager pulseaudio pavucontrol pulsemixer feh papirus-icon-theme exa maim dunst xdotool unzip micro geany geany-plugins redshift firefox-esr vlc font-awesome terminus-font libnotify lightdm 
 #extracting
-tar -xvfz Voidsuckless.tar.gz -C Voidsuckless
+tar -xf Voidsuckless.tar.gz 
 #Void suckless location
 cd Voidsuckless
 #dwm installation 
@@ -40,5 +40,5 @@ cp wallpaper.jpg ~/wallpaper.jpg
 sudo xbps-install -S flatpak
 flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
 #reboot
-sudo reboot
+
  
