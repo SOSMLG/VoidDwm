@@ -6,7 +6,8 @@ sudo apt update && sudo apt install -y \
     thunar-archive-plugin thunar-volman file-roller lxappearance dialog mtools avahi-daemon \
     acpi acpid gvfs xfce4-power-manager pulseaudio pavucontrol pulsemixer feh \
     papirus-icon-theme exa maim dunst xdotool unzip micro geany geany-plugins redshift \
-    firefox-esr vlc fonts-font-awesome fonts-terminus libnotify-bin lightdm
+    firefox-esr vlc fonts-font-awesome fonts-terminus libnotify-bin lightdm  linux-image-amd64 \
+    linux-headers-amd64 firmware-iwlwifi firmware-misc-nonfree libxcb-res0-dev libx11-xcb-dev \
 
 # Extracting
 tar -xf Voidsuckless.tar.gz
