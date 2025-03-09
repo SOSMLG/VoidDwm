@@ -30,6 +30,7 @@ sudo make clean install
 
 # Adding Dwm to LightDM
 cd ..
+cd ..
 sudo chmod +x dwm.desktop autostart.sh
 sudo mkdir -p /usr/share/xsessions /usr/local/bin
 sudo cp dwm.desktop /usr/share/xsessions/dwm.desktop
