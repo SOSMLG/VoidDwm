@@ -52,6 +52,7 @@ cp wallpaper.jpg ~/wallpaper.jpg
 # Flatpak
 sudo apt install -y flatpak
 flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
-
+#idk 
+gsettings set org.blueman.general notification-daemon false 
 # Reboot
 sudo reboot
