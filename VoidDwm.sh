@@ -1,5 +1,5 @@
 #Important package
-sudo xbps-install base-devel freetype-devel libXft-devel libXinerama-devel libX11-devel libxcb-devel harfbuzz-devel xorg-server xbacklight xbindkeys xvkbd xorg elogind dbus xinput gcc flameshot make binutils compton git NetworkManager thunar-archive-plugin thunar-volman xarchiver lxappearance dialog mtools avahi acpi acpid gvfs xfce4-power-manager pulseaudio pavucontrol pulsemixer feh papirus-icon-theme exa maim dunst xdotool unzip micro geany geany-plugins redshift firefox-esr vlc font-awesome terminus-font libnotify lightdm 
+sudo xbps-install base-devel libreoffice freetype-devel libXft-devel libXinerama-devel libX11-devel libxcb-devel harfbuzz-devel xorg-server xbacklight xbindkeys xvkbd xorg elogind dbus xinput gcc flameshot make binutils compton git NetworkManager thunar-archive-plugin thunar-volman xarchiver lxappearance dialog mtools avahi acpi acpid gvfs xfce4-power-manager pulseaudio pavucontrol pulsemixer feh papirus-icon-theme exa maim dunst xdotool unzip micro geany geany-plugins redshift firefox-esr vlc font-awesome terminus-font libnotify lightdm 
 sudo xbps-install -S void-repo-multilib void-repo-multilib-nonfree
 #extracting
 tar -xf Voidsuckless.tar.gz 
@@ -15,17 +15,23 @@ cd ..
 cd st 
 sudo make clean install
 cd ..
-cd slstatus 
+cd slstatus
+cd ..
+cd fonts
+sudo cp *.ttf /usr/share/fonts
 sudo make clean install
 #adding Dwm to Lighdm
 cd ..  
 cd ..
+cp compton.conf ~/.config
 sudo chmod +x dwm.desktop
 sudo chmod +x autostart.sh
 sudo mkdir /usr/share/xsessions/
 sudo mkdir /usr/local/bin/
 sudo cp  dwm.desktop  /usr/share/xsessions/dwm.desktop 
 sudo cp  autostart.sh /usr/local/bin/start_dwm.sh
+sudo mkdir -p /etc/X11/xorg.conf.d
+sudo cp intel-battery.conf /etc/X11/xorg.conf.d/20-intel.conf
 #activating services 
 sudo ln -s /etc/sv/dbus /var/service
 sudo ln -s /etc/sv/elogind /var/service
@@ -40,5 +46,6 @@ cp wallpaper.jpg ~/wallpaper.jpg
 #flatpak
 sudo xbps-install -S flatpak
 flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
+
 #reboot
 sudo reboot 
