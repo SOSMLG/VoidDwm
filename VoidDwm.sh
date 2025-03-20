@@ -17,11 +17,11 @@ sudo make clean install
 cd ..
 cd slstatus
 cd ..
-cd fonts
-sudo cp *.ttf /usr/share/fonts
 sudo make clean install
 #adding Dwm to Lighdm
 cd ..  
+cd fonts
+sudo cp * /usr/share/fonts/
 cd ..
 cp compton.conf ~/.config
 sudo chmod +x dwm.desktop
