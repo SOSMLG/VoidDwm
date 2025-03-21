@@ -31,8 +31,6 @@ sudo mkdir /usr/share/xsessions/
 sudo mkdir /usr/local/bin/
 sudo cp  dwm.desktop  /usr/share/xsessions/dwm.desktop 
 sudo cp  autostart.sh /usr/local/bin/start_dwm.sh
-sudo mkdir -p /etc/X11/xorg.conf.d
-sudo cp intel-battery.conf /etc/X11/xorg.conf.d/20-intel.conf
 #activating services 
 sudo ln -s /etc/sv/dbus /var/service
 sudo ln -s /etc/sv/elogind /var/service
