@@ -16,6 +16,7 @@ cd st
 sudo make clean install
 cd ..
 cd slstatus
+sudo make clean install
 cd ..
 sudo make clean install
 #adding Dwm to Lighdm
