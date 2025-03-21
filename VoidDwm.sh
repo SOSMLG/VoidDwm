@@ -3,6 +3,7 @@ sudo xbps-install base-devel libreoffice freetype-devel libXft-devel libXinerama
 sudo xbps-install -S void-repo-multilib void-repo-multilib-nonfree
 #extracting
 tar -xf Voidsuckless.tar.gz 
+tar -xf fonts.tar.gz
 #Void suckless location
 cd Voidsuckless
 #dwm installation 
@@ -24,7 +25,7 @@ cd ..
 cd fonts
 sudo cp * /usr/share/fonts/
 cd ..
-cp compton.conf ~/.config
+cp compton.conf ~/.config/compton.conf
 sudo chmod +x dwm.desktop
 sudo chmod +x autostart.sh
 sudo mkdir /usr/share/xsessions/
@@ -45,6 +46,5 @@ cp wallpaper.jpg ~/wallpaper.jpg
 #flatpak
 sudo xbps-install -S flatpak
 flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
-
 #reboot
 sudo reboot 
