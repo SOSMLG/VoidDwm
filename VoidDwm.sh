@@ -63,7 +63,8 @@ sudo xbps-install -Sy \
     font-awesome \
     terminus-font \
     libnotify \
-    lightdm
+    lightdm \
+    curl
 
 # Enable multilib repositories if needed
 sudo xbps-install -Sy void-repo-multilib void-repo-multilib-nonfree
