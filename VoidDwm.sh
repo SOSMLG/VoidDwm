@@ -126,6 +126,9 @@ sudo sv up NetworkManager
 # 7. Set Wallpaper (copy to home directory)
 cp wallpaper.jpg ~/wallpaper.jpg 
 
+# 9. Installing Oh My Bash 
+bash -c "$(curl -fsSL https://raw.githubusercontent.com/ohmybash/oh-my-bash/master/tools/install.sh)"
+
 # 8. Install Flatpak and Add Flathub Repository
 sudo xbps-install -Sy flatpak
 flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
