@@ -10,17 +10,17 @@
 set -e  # Exit immediately if any command fails
 
 # 1. Install Required Packages
-sudo xbps-install -Sy \
-    base-devel \
+sudo apt update && sudo apt install -y \
+    build-essential \
     libreoffice \
-    freetype-devel \
-    libXft-devel \
-    libXinerama-devel \
-    libX11-devel \
-    libxcb-devel \
-    harfbuzz-devel \
-    xorg-server \
-    xbacklight \
+    libfreetype6-dev \
+    libxft-dev \
+    libxinerama-dev \
+    libx11-dev \
+    libxcb1-dev \
+    libharfbuzz-dev \
+    xserver-xorg \
+    x11-xserver-utils \
     xbindkeys \
     xvkbd \
     elogind \
@@ -32,14 +32,14 @@ sudo xbps-install -Sy \
     binutils \
     compton \
     git \
-    NetworkManager \
+    network-manager \
     thunar-archive-plugin \
     thunar-volman \
     xarchiver \
     lxappearance \
     dialog \
     mtools \
-    avahi \
+    avahi-daemon \
     acpi \
     acpid \
     gvfs \
@@ -60,11 +60,12 @@ sudo xbps-install -Sy \
     redshift \
     firefox-esr \
     vlc \
-    font-awesome \
-    terminus-font \
-    libnotify \
+    fonts-font-awesome \
+    fonts-terminus \
+    libnotify-bin \
     lightdm \
     curl
+
 
 # Enable multilib repositories if needed
 sudo xbps-install -Sy void-repo-multilib void-repo-multilib-nonfree
